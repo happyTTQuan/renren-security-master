@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.sys.dao.NideshopCouponDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.sys.entity.NideshopCouponEntity" id="nideshopCouponMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="typeMoney" column="type_money"/>
+        <result property="sendType" column="send_type"/>
+        <result property="minAmount" column="min_amount"/>
+        <result property="maxAmount" column="max_amount"/>
+        <result property="sendStartDate" column="send_start_date"/>
+        <result property="sendEndDate" column="send_end_date"/>
+        <result property="useStartDate" column="use_start_date"/>
+        <result property="useEndDate" column="use_end_date"/>
+        <result property="minGoodsAmount" column="min_goods_amount"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>快递信息表</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:nideshoporderexpress:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">订单ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.orderId" placeholder="订单ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">商品详情</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.goodsDetail" placeholder="商品详情"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">收获人地址</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.recvAddress" placeholder="收获人地址"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">收获人名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.recvUsername" placeholder="收获人名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">收货人手机号码</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.recvMobile" placeholder="收货人手机号码"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">快递单号</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="nideshopOrderExpress.expressNo" placeholder="快递单号"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">快递公司名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="nideshopOrderExpress.expressName" placeholder="快递公司名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">订单金额</div>
+                        <div class="col-sm-10">
+                            <input type="text" readonly="true" class="form-control" v-model="nideshopOrderExpress.orderPrice" placeholder="订单金额"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" id="btnSaveOrUpdate" data-loading-text="保存中..." @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/nideshoporderexpress.js?_${.now?long}"></script>
+</body>
+</html>

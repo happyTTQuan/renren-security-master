@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.sys.dao.NideshopUserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.sys.entity.NideshopUserEntity" id="nideshopUserMap">
+        <result property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="gender" column="gender"/>
+        <result property="birthday" column="birthday"/>
+        <result property="registerTime" column="register_time"/>
+        <result property="lastLoginTime" column="last_login_time"/>
+        <result property="lastLoginIp" column="last_login_ip"/>
+        <result property="userLevelId" column="user_level_id"/>
+        <result property="nickname" column="nickname"/>
+        <result property="mobile" column="mobile"/>
+        <result property="registerIp" column="register_ip"/>
+        <result property="avatar" column="avatar"/>
+        <result property="weixinOpenid" column="weixin_openid"/>
+    </resultMap>
+
+
+</mapper>

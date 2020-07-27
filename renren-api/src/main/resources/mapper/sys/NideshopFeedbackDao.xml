@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.sys.dao.NideshopFeedbackDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.sys.entity.NideshopFeedbackEntity" id="nideshopFeedbackMap">
+        <result property="msgId" column="msg_id"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userEmail" column="user_email"/>
+        <result property="msgTitle" column="msg_title"/>
+        <result property="msgType" column="msg_type"/>
+        <result property="msgStatus" column="msg_status"/>
+        <result property="msgContent" column="msg_content"/>
+        <result property="msgTime" column="msg_time"/>
+        <result property="messageImg" column="message_img"/>
+        <result property="orderId" column="order_id"/>
+        <result property="msgArea" column="msg_area"/>
+    </resultMap>
+
+
+</mapper>
